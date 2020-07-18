@@ -25,7 +25,7 @@ export class UserProfileCard extends LitElement {
         ${this.visible ? 'Hide phone' : 'Show phone'}
       </button>
 
-      <p ?hidden=${!this.visible}>${this.phone}</p>
+      <p id="phone" ?hidden=${!this.visible}>${this.phone}</p>
     `;
   }
 }
