@@ -1,14 +1,12 @@
 import { LitElement, html } from 'lit-element';
 import { getStyles } from '../utils.js';
-import { visibilityMixin } from '../mixins/visibility-mixin.js';
-import { checkboxMixin } from '../mixins/checkbox-mixin.js';
+import { visibilityProps, toggleVisibility } from '../addons/visibility.js';
 import styles from './user-profile-card.scss';
 
-export class UserProfileCard extends checkboxMixin(
-  visibilityMixin(LitElement),
-) {
+export class UserProfileCard extends LitElement {
   static get properties() {
     return {
+      ...visibilityProps,
       name: { type: String },
       email: { type: String },
       phone: { type: String },
@@ -23,7 +21,7 @@ export class UserProfileCard extends checkboxMixin(
     return html`
       <p>${this.name} – ${this.email}</p>
 
-      <button @click=${this.toggle}>
+      <button @click=${toggleVisibility}>
         ${this.visible ? 'Hide phone' : 'Show phone'}
       </button>
 
