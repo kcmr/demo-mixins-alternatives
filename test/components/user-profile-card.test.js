@@ -1,6 +1,6 @@
 import { assert, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
-import * as sideEffects from '../../src/addons/side-effects.js';
+import sideEffects from '../../src/addons/side-effects.js';
 import '../../src/index.js';
 
 suite('<user-profile-card>', () => {
@@ -29,6 +29,9 @@ suite('<user-profile-card>', () => {
     const el = await fixture(html`<user-profile-card></user-profile-card>`);
     const button = el.shadowRoot.querySelector('#buttonDestroy');
     const destroyThePlanetStub = sinon.stub(sideEffects, 'destroyThePlanet');
+
+    el.requestUpdate();
+    await el.updateComplete;
 
     button.click();
 

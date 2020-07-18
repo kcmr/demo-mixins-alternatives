@@ -1,7 +1,9 @@
-export const visibilityProps = {
-  visible: { type: Boolean },
-};
+export default {
+  properties: {
+    visible: { type: Boolean },
+  },
 
-export function toggleVisibility() {
-  this.visible = !this.visible;
-}
+  toggle() {
+    this.visible = !this.visible;
+  },
+};

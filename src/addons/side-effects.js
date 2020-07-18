@@ -1,3 +1,5 @@
-export function destroyThePlanet() {
-  console.log('Terrible things will happen');
-}
+export default {
+  destroyThePlanet() {
+    console.log('Terrible things will happen');
+  },
+};
