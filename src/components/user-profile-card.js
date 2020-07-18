@@ -1,19 +1,15 @@
 import { LitElement, html } from 'lit-element';
 import { getStyles } from '../utils.js';
+import { visibilityMixin } from '../mixins/visibility-mixin.js';
 import styles from './user-profile-card.scss';
 
-export class UserProfileCard extends LitElement {
+export class UserProfileCard extends visibilityMixin(LitElement) {
   static get properties() {
     return {
       name: { type: String },
       email: { type: String },
       phone: { type: String },
-      visible: { type: Boolean },
     };
-  }
-
-  toggle() {
-    this.visible = !this.visible;
   }
 
   static get styles() {
