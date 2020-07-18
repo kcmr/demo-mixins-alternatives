@@ -25,6 +25,27 @@ suite('<user-profile-card>', () => {
     assert.isTrue(phone.hidden, 'phone is hidden after clicking button');
   });
 
+  test('"togglePhone()" changes the phone visibility', async () => {
+    const el = await fixture(
+      html`<user-profile-card phone="XXX"></user-profile-card>`,
+    );
+
+    const phone = el.shadowRoot.querySelector('#phone');
+
+    el.togglePhone();
+    await el.updateComplete;
+
+    assert.isFalse(
+      phone.hidden,
+      'phone is visible after calling togglePhone()',
+    );
+
+    el.togglePhone();
+    await el.updateComplete;
+
+    assert.isTrue(phone.hidden, 'phone is hidden after calling togglePhone()');
+  });
+
   test('Clicking destroy the planet button calls "destroyThePlanet()"', async () => {
     const el = await fixture(html`<user-profile-card></user-profile-card>`);
     const button = el.shadowRoot.querySelector('#buttonDestroy');

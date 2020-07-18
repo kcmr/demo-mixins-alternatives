@@ -5,6 +5,11 @@ import sideEffects from '../addons/side-effects.js';
 import styles from './user-profile-card.scss';
 
 export class UserProfileCard extends LitElement {
+  constructor() {
+    super();
+    this.togglePhone = visibility.toggle.bind(this);
+  }
+
   static get properties() {
     return {
       ...visibility.properties,
@@ -12,10 +17,6 @@ export class UserProfileCard extends LitElement {
       email: { type: String },
       phone: { type: String },
     };
-  }
-
-  togglePhone() {
-    visibility.toggle.call(this);
   }
 
   static get styles() {
