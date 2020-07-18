@@ -1,5 +1,7 @@
 {
   "extends": "@snowpack/app-scripts-lit-element",
-  "scripts": {},
+  "scripts": {
+    "mount:public": "mount demo --to /"
+  },
   "plugins": []
 }

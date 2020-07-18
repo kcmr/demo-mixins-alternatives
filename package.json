@@ -7,12 +7,14 @@
     "lint": "prettier --check \"src/**/*.js\""
   },
   "dependencies": {
-    "lit-element": "^2.3.1",
-    "lit-html": "^1.2.1"
+    "lit-element": "^2.0.0",
+    "lit-html": "^1.0.0"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-lit-element": "^1.6.0-alpha.0",
-    "prettier": "^2.0.5",
-    "snowpack": "^2.6.4"
+    "@researchgate/babel-plugin-transform-scss-import-to-string": "1.0.0",
+    "@snowpack/app-scripts-lit-element": "1.6.0-alpha.0",
+    "node-sass": "4.14.1",
+    "prettier": "2.0.5",
+    "snowpack": "2.6.4"
   }
 }
