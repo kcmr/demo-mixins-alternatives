@@ -18,6 +18,13 @@
       phone="666 666 666"
     ></user-profile-card>
 
-    <script type="module" src="/_dist_/index.js"></script>
+    <script type="module">
+      import '/_dist_/index.js';
+
+      const component = document.querySelector('user-profile-card');
+      component.addEventListener('button-click', ({ type, detail }) => {
+        console.log(type, detail);
+      });
+    </script>
   </body>
 </html>

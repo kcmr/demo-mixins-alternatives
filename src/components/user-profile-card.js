@@ -2,9 +2,10 @@ import { LitElement, html } from 'lit-element';
 import { getStyles } from '../utils.js';
 import visibility from '../addons/visibility.js';
 import sideEffects from '../addons/side-effects.js';
+import { emitButtonClickEventsMixin } from '../mixins/button-click-events-mixin.js';
 import styles from './user-profile-card.scss';
 
-export class UserProfileCard extends LitElement {
+export class UserProfileCard extends emitButtonClickEventsMixin(LitElement) {
   constructor() {
     super();
     this.togglePhone = visibility.toggle.bind(this);
