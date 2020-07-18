@@ -14,6 +14,10 @@ export class UserProfileCard extends LitElement {
     };
   }
 
+  togglePhone() {
+    visibility.toggle.call(this);
+  }
+
   static get styles() {
     return getStyles(styles);
   }

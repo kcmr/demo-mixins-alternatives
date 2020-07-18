@@ -2,9 +2,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   background-color: #e8e8e8;
   margin: 1rem;
+  text-align: center;
 }
 
 .profile-card {
   max-width: 300px;
-  margin: auto;
+  margin: 1rem auto;
 }
