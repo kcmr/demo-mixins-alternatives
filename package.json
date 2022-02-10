@@ -17,7 +17,7 @@
     "@open-wc/testing-karma": "3.4.7",
     "@researchgate/babel-plugin-transform-scss-import-to-string": "1.0.0",
     "@snowpack/app-scripts-lit-element": "1.6.0-alpha.0",
-    "node-sass": "4.14.1",
+    "node-sass": "7.0.0",
     "prettier": "2.0.5",
     "sinon": "9.0.2",
     "snowpack": "2.6.4",
