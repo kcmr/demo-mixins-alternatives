@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@open-wc/testing": "2.5.19",
-    "@open-wc/testing-karma": "3.4.7",
+    "@open-wc/testing-karma": "4.0.9",
     "@researchgate/babel-plugin-transform-scss-import-to-string": "1.0.0",
     "@snowpack/app-scripts-lit-element": "1.6.0-alpha.0",
     "node-sass": "4.14.1",
